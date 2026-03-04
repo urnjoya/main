@@ -243,7 +243,7 @@
         "rank-id": "15",
         "type": "tool",
         "title": "Password Generator",
-        "slug": "security-tools/password-strength-generator.html",
+        "slug": "security-tools/password-generator.html",
         "category": "security-tool",
         "icon": "🔏",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt.",
@@ -283,6 +283,7 @@
     }
 
 ]
+
 
 
 
