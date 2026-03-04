@@ -31,7 +31,7 @@ function clearAllEditor() {
 }
 
 // True Start
-function copyResultEditorAdjTrue() {
+function copyResultEditorTrue() {
     const resultEl = document.getElementById("result").textContent;
     if (resultEl == 'Your result will appear here...') {
         showNotification('No result to copy', "error");
@@ -44,4 +44,5 @@ function clearAllEditorTrue() {
     document.getElementById("result").textContent = "Your result will appear here...";
 }
 // True End
+
 
