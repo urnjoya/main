@@ -225,8 +225,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
-
-        function clearAll() {
-            document.getElementById('input-text').value = '';
-            document.getElementById('result').textContent = 'Your generated slug will appear here...';
-        }
