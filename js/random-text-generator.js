@@ -203,20 +203,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             // =========================
-            // Copy Function
-            // =========================
-            window.copyResult = function () {
-
-                const text = resultBox.innerText;
-
-                if (text === '' || text === 'Your generated text will appear here...') {
-                    showNotification('No result to copy', 'error');
-                    return;
-                }
-                copyToClipboard(text, document.getElementById('copy-btn'));
-            };
-
-            // =========================
             // Utility
             // =========================
             function capitalize(word) {
