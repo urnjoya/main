@@ -1,0 +1,13 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Disallow: /js/
+Disallow: /css/
+Disallow: /assets/
+Disallow: /data/
+
+# Block any sensitive or staging pages (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Specify the location of your sitemap
+Sitemap: https://www.abcroot.xyz/sitemap.xml
