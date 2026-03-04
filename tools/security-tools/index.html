@@ -6,30 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Toolzy offers free online tools for text processing, development, security, encoding, formatting, and productivity. Fast, browser-based and privacy-focused utilities.">
+        content="Free online security tools including password generators, hash calculators, and encryption utilities. Fast, secure, browser-based, and privacy-focused – no data stored.">
     <meta name="keywords"
-        content="free online tools, developer tools, text tools, security tools, JSON formatter, base64 encoder, hash generator, online utilities">
-    <meta name="author" content="Toolzy">
+        content="security tools, password generator, hash calculator, encryption tool, online security utilities, privacy-focused tools, free online tools, abcroot">
+    <meta name="author" content="abcroot">
     <meta name="robots" content="index, follow">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Free Online Tools for Developers, Writers & Security | Toolzy">
-    <meta property="og:description" content="Fast, free, privacy-focused online tools for developers and creators.">
-    <meta property="og:url" content="https://www.toolzy.xyz">
-    <meta property="og:image" content="https://www.toolzy.xyz/assets/preview.png">
+    <meta property="og:site_name" content="abcroot">
+    <meta property="og:title" content="Free Online Security Tools | abcroot">
+    <meta property="og:description"
+        content="Access secure, privacy-focused browser tools for password generation, hashing, and encryption. 100% free and no signup required.">
+    <meta property="og:url" content="https://www.abcroot.xyz/tools/security-tools/">
+    <meta property="og:image" content="https://www.abcroot.xyz/assets/security-tools-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Free Online Tools | Toolzy">
-    <meta name="twitter:description" content="Professional browser-based tools. 100% free and secure.">
-    <meta name="twitter:image" content="https://www.toolzy.xyz/assets/preview.png">
-    <title>Security & Privacy Tools - Toolzy</title>
-    <link rel="canonical" href="https://www.toolzy.xyz/tools/security-tools/">
+    <meta name="twitter:title" content="Security Tools – Password, Hash & Encryption">
+    <meta name="twitter:description"
+        content="Use free online security tools for password generation, hashing, and encryption. Fast, secure, and privacy-first.">
+    <meta name="twitter:image" content="https://www.abcroot.xyz/assets/security-tools-preview.png">
+
+    <title>Security & Privacy Tools – Free Online Utilities | abcroot</title>
+    <link rel="canonical" href="https://www.abcroot.xyz/tools/security-tools/">
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
     <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preload" href="../../css/main.css" as="style">
     <link rel="stylesheet" href="../../css/main.css">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Security Tools",
+  "description": "Free online security tools including password generators, hash calculators, and encryption utilities. Fast, browser-based, and privacy-focused.",
+  "url": "https://www.abcroot.xyz/tools/security-tools/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "abcroot",
+    "url": "https://www.abcroot.xyz"
+  }
+}
+</script>
 </head>
 
 <body>
@@ -37,14 +60,14 @@
     <nav class="navbar">
         <div class="container navbar-container">
             <a href="../../" class="navbar-logo">Toolzy</a>
-
-            <div class="navbar-search">
-                <div class="search-input">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" id="search-input" placeholder="Search tools...">
-                </div>
-            </div>
-
+                        <div class="navbar-search">
+                                <div class="search-input">
+                                        <span class="search-icon">🔍</span>
+                                        <input type="text" id="searchInput" placeholder="Search tools..."
+                        autocomplete="off">
+                                        <div id="searchResults" class="search-results"></div>
+                                    </div>
+                            </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span class="mobile-menu-icon"></span>
             </button>
@@ -81,19 +104,36 @@
             <h2 class="text-center mb-lg">Explore Other Categories</h2>
             <div class="grid grid-cols-3">
                 <a href="../../tools/text-tools/" class="card category-card">
-                    <div class="category-card-icon">📝</div>
+                    <div class="category-card-icon"><svg class="icon" width="48" height="48" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="8" y1="13" x2="16" y2="13" />
+                            <line x1="8" y1="17" x2="16" y2="17" />
+                        </svg></div>
                     <h3 class="category-card-title">Text & Writing</h3>
                     <p class="card-description">Word counters, case converters, and text generators.</p>
                 </a>
 
                 <a href="../../tools/developer-tools/" class="card category-card">
-                    <div class="category-card-icon">💻</div>
+                    <div class="category-card-icon"><svg class="icon" width="48" height="48" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg></div>
                     <h3 class="category-card-title">Developer Tools</h3>
                     <p class="card-description">Code formatters, generators, and validators.</p>
                 </a>
 
                 <a href="../../tools/utility-tools/" class="card category-card">
-                    <div class="category-card-icon">🛠️</div>
+                    <div class="category-card-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="M14.7 6.3a4 4 0 0 0 5 5l-9 9-4-4 9-9z" />
+                            <path d="M16 4l4 4" />
+                        </svg></div>
                     <h3 class="category-card-title">Random & Utility</h3>
                     <p class="card-description">Random generators and converters.</p>
                 </a>
@@ -110,19 +150,41 @@
             </div>
             <div class="category-modal-body grid grid-cols-2 gap-lg">
                 <a href="../../tools/text-tools/" class="category-popup-card">
-                    <div class="popup-icon">✍️</div>
+                    <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="8" y1="13" x2="16" y2="13" />
+                            <line x1="8" y1="17" x2="16" y2="17" />
+                        </svg></div>
                     <span>Text Tools</span>
                 </a>
                 <a href="../../tools/developer-tools/" class="category-popup-card">
-                    <div class="popup-icon">💻</div>
+                    <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg></div>
                     <span>Developer Tools</span>
                 </a>
                 <a href="../../tools/security-tools/" class="category-popup-card">
-                    <div class="popup-icon">🔐</div>
+                    <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg></div>
                     <span>Security</span>
                 </a>
                 <a href="../../tools/utility-tools/" class="category-popup-card">
-                    <div class="popup-icon">🎲</div>
+                    <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M14.7 6.3a4 4 0 0 0 5 5l-9 9-4-4 9-9z" />
+                            <path d="M16 4l4 4" />
+                        </svg></div>
                     <span>Utility</span>
                 </a>
             </div>
@@ -170,13 +232,19 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Toolzy. All rights reserved. Built with care for productivity.</p>
+                <p>&copy; <span class="f-year"></span> abcroot. All rights reserved. Built with care for productivity.
             </div>
         </div>
     </footer>
 
     <script src="../../js/main.js" defer></script>
     <script src="../../js/security-tools.js" defer></script>
+    <!-- FOR FOOTER YEAR UPDATE -->
+    <script src="../../js/main-j.js" defer></script>
+    <!-- FOR MODEL OPEN -->
+    <script src="../../js/main-m.js" defer></script>
+    <!-- FOR SEARCH BY INDEX -->
+    <script src="../../js/search-index.js" defer></script>
 </body>
 
 
