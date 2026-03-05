@@ -7,8 +7,8 @@
         "title": "Random Color Generator",
         "slug": "random-color-generator.html",
         "category": "utility-tool",
-        "icon": "🔤",
-        "short_description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt.",
+        "icon": "🎨",
+        "short_description": "Generate random colors instantly and copy HEX or RGB values for design projects, UI themes, and creative inspiration.",
         "features": [
             "null"
         ],
@@ -214,4 +214,5 @@
     }
 
 ]
+
 
