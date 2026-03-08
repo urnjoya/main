@@ -2,17 +2,15 @@
    TOOLZY - Main JavaScript
    Vanilla JS functionality
    ============================================ */
-
 // ============================================
 // MOBILE MENU TOGGLE
 // ============================================
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const mobileToggle = document.querySelector('.mobile-menu-toggle');
   const navbarMenu = document.querySelector('.navbar-menu');
-  
+
   if (mobileToggle && navbarMenu) {
-    mobileToggle.addEventListener('click', function() {
+    mobileToggle.addEventListener('click', function () {
       navbarMenu.classList.toggle('active');
     });
   }
@@ -25,31 +23,31 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeSearch() {
   const searchInput = document.getElementById('search-input');
   const toolCards = document.querySelectorAll('.tool-card');
-  
+
   if (!searchInput || toolCards.length === 0) return;
-  
-  searchInput.addEventListener('input', function(e) {
+
+  searchInput.addEventListener('input', function (e) {
     const searchTerm = e.target.value.toLowerCase().trim();
-    
+
     toolCards.forEach(card => {
       const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
       const description = card.querySelector('.card-description')?.textContent.toLowerCase() || '';
       const searchableText = title + ' ' + description;
-      
+
       if (searchableText.includes(searchTerm)) {
         card.parentElement.style.display = '';
       } else {
         card.parentElement.style.display = 'none';
       }
     });
-    
+
     // Show "no results" message if needed
-    const visibleCards = Array.from(toolCards).filter(card => 
+    const visibleCards = Array.from(toolCards).filter(card =>
       card.parentElement.style.display !== 'none'
     );
-    
+
     let noResultsMsg = document.getElementById('no-results-message');
-    
+
     if (visibleCards.length === 0 && searchTerm !== '') {
       if (!noResultsMsg) {
         noResultsMsg = document.createElement('div');
@@ -78,7 +76,7 @@ function copyToClipboard(text, button) {
     showNotification('Nothing to copy!', 'error');
     return;
   }
-  
+
   // Use modern clipboard API
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text)
@@ -100,26 +98,19 @@ function fallbackCopy(text, button) {
   textarea.style.opacity = '0';
   document.body.appendChild(textarea);
   textarea.select();
-  
+
   try {
     document.execCommand('copy');
     handleCopySuccess(button);
   } catch (err) {
     showNotification('Failed to copy', 'error');
   }
-  
+
   document.body.removeChild(textarea);
 }
 
 function handleCopySuccess(button) {
-  const originalText = button.textContent;
-  button.classList.add('copied');
-  button.textContent = '✓ Copied!';
-  
-  setTimeout(() => {
-    button.classList.remove('copied');
-    button.textContent = originalText;
-  }, 2000);
+  showNotification('Copied !', 'success');
 }
 
 // ============================================
@@ -128,13 +119,13 @@ function handleCopySuccess(button) {
 
 function initializeAccordions() {
   const accordionHeaders = document.querySelectorAll('.accordion-header');
-  
+
   accordionHeaders.forEach(header => {
-    header.addEventListener('click', function() {
+    header.addEventListener('click', function () {
       const item = this.parentElement;
       const content = this.nextElementSibling;
       const isActive = item.classList.contains('active');
-      
+
       // Close all accordion items
       document.querySelectorAll('.accordion-item').forEach(accItem => {
         accItem.classList.remove('active');
@@ -143,7 +134,7 @@ function initializeAccordions() {
           accContent.style.maxHeight = null;
         }
       });
-      
+
       // Open clicked item if it wasn't active
       if (!isActive) {
         item.classList.add('active');
@@ -166,11 +157,11 @@ function showNotification(message, type = 'info') {
   if (existing) {
     existing.remove();
   }
-  
+
   const notification = document.createElement('div');
   notification.className = `notification-toast notification-${type}`;
   notification.textContent = message;
-  
+
   // Add styles inline for toast notification
   Object.assign(notification.style, {
     position: 'fixed',
@@ -185,7 +176,7 @@ function showNotification(message, type = 'info') {
     animation: 'slideInUp 0.3s ease',
     maxWidth: '400px'
   });
-  
+
   // Set color based on type
   if (type === 'success') {
     notification.style.background = '#10b981';
@@ -197,9 +188,9 @@ function showNotification(message, type = 'info') {
     notification.style.background = '#2563eb';
     notification.style.color = 'white';
   }
-  
+
   document.body.appendChild(notification);
-  
+
   setTimeout(() => {
     notification.style.animation = 'slideOutDown 0.3s ease';
     setTimeout(() => notification.remove(), 300);
@@ -240,10 +231,10 @@ document.head.appendChild(style);
 function validateForm(formId) {
   const form = document.getElementById(formId);
   if (!form) return false;
-  
+
   const inputs = form.querySelectorAll('input[required], textarea[required]');
   let isValid = true;
-  
+
   inputs.forEach(input => {
     if (!input.value.trim()) {
       isValid = false;
@@ -252,7 +243,7 @@ function validateForm(formId) {
       input.style.borderColor = 'var(--color-border)';
     }
   });
-  
+
   return isValid;
 }
 
@@ -263,11 +254,11 @@ function validateForm(formId) {
 function showLoading(elementId) {
   const element = document.getElementById(elementId);
   if (!element) return;
-  
+
   const overlay = document.createElement('div');
   overlay.className = 'loading-overlay';
   overlay.innerHTML = '<div class="loading-spinner loading-spinner-lg"></div>';
-  
+
   element.style.position = 'relative';
   element.appendChild(overlay);
 }
@@ -275,7 +266,7 @@ function showLoading(elementId) {
 function hideLoading(elementId) {
   const element = document.getElementById(elementId);
   if (!element) return;
-  
+
   const overlay = element.querySelector('.loading-overlay');
   if (overlay) {
     overlay.remove();
@@ -316,7 +307,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
     if (href === '#') return;
-    
+
     e.preventDefault();
     const target = document.querySelector(href);
     if (target) {
@@ -332,17 +323,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ACTIVE LINK HIGHLIGHTING
 // ============================================
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('.navbar-link');
-  
+
   navLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPath || 
-        (currentPath !== '/' && currentPath.includes(link.getAttribute('href')))) {
+    if (link.getAttribute('href') === currentPath ||
+      (currentPath !== '/' && currentPath.includes(link.getAttribute('href')))) {
       link.style.color = 'var(--color-primary)';
     }
   });
-  
+
   // Highlight active category button
   const categoryButtons = document.querySelectorAll('.category-button');
   categoryButtons.forEach(button => {
@@ -365,5 +356,3 @@ window.validateForm = validateForm;
 window.debounce = debounce;
 window.formatNumber = formatNumber;
 window.escapeHtml = escapeHtml;
-
-// 
