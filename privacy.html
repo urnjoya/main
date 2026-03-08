@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,6 @@
         content="privacy policy, data protection, online tools privacy, browser-based tools, no tracking, secure online tools, abcroot privacy">
     <meta name="author" content="abcroot">
     <meta name="robots" content="index, follow">
-
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="abcroot">
@@ -22,14 +21,12 @@
     <meta property="og:image" content="https://abcroot.xyz/assets/privacy-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Privacy Policy – abcroot">
     <meta name="twitter:description"
         content="abcroot respects your privacy. No personal data is stored, tracked, or shared. All tools run entirely in your browser.">
     <meta name="twitter:image" content="https://abcroot.xyz/assets/privacy-preview.png">
-
     <title>Privacy Policy – abcroot</title>
     <link rel="canonical" href="https://abcroot.xyz/privacy.html">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -39,7 +36,6 @@
     <script src="js/analytics.js"></script>
     <link rel="preload" href="css/main.css" as="style">
     <link rel="stylesheet" href="css/main.css">
-
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
 {
@@ -58,18 +54,17 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container navbar-container">
-            <a href="index.html" class="navbar-logo">abcroot</a>
-                        <div class="navbar-search">
-                                <div class="search-input">
-                                        <span class="search-icon">🔍</span>
-                                        <input type="text" id="searchInput" placeholder="Search tools..."
-                        autocomplete="off">
-                                        <div id="searchResults" class="search-results"></div>
-                                    </div>
-                            </div>
-            <button class="mobile-menu-toggle"><span class="mobile-menu-icon"></span></button>
+            <a href="index.html" class="navbar-logo" aria-label="abcroot homepage">abcroot</a>
+            <div class="navbar-search">
+                <div class="search-input">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Search tools..." autocomplete="off">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu"><span class="mobile-menu-icon"></span></button>
             <div class="navbar-menu">
                 <ul class="navbar-links">
                     <li><a href="about.html" class="navbar-link">About</a></li>
@@ -79,17 +74,16 @@
             </div>
         </div>
     </nav>
-    <div class="page-header">
+    <header class="page-header">
         <div class="container">
             <h1 class="page-title">Privacy Policy</h1>
             <p class="page-description">Last updated: February 17, 2026</p>
         </div>
-    </div>
-
+    </header>
     <section class="section">
-        <div class="container">
+        <section class="container">
             <div class="grid grid-cols-1" style="max-width: 800px; margin: 0 auto;">
-                <div class="card">
+                <section class="card">
                     <h2 class="card-title">Overview</h2>
                     <div class="card-body">
                         <p>At abcroot, we take your privacy seriously. This Privacy Policy explains how we collect, use,
@@ -99,9 +93,9 @@
                             processed entirely
                             in your web browser and never sent to our servers.</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="card">
+                <section class="card">
                     <h2 class="card-title">Information We Collect</h2>
                     <div class="card-body">
                         <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-sm);">Data Processed
@@ -116,9 +110,9 @@
                             <li>Is cleared when you close or refresh the page</li>
                         </ul>
                     </div>
-                </div>
+                </section>
 
-                <div class="card">
+                <section class="card">
                     <h2 class="card-title">Cookies</h2>
                     <div class="card-body">
                         <p>abcroot does not use cookies for tracking or analytics. We may use essential cookies only
@@ -130,9 +124,9 @@
                         </ul>
                         <p>No third-party tracking cookies are used on our platform.</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="card">
+                <section class="card">
                     <h2 class="card-title">Third-Party Services</h2>
                     <div class="card-body">
                         <p>We may use third-party services for:</p>
@@ -143,9 +137,9 @@
                         </ul>
                         <p>We do not share your personal information.</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="card">
+                <section class="card">
                     <h2 class="card-title">Data Security</h2>
                     <div class="card-body">
                         <p>Since we don't collect or store your data, there's minimal risk of data breaches. Our
@@ -157,9 +151,8 @@
                             <li>Complete privacy for your data</li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="card">
+                </section>
+                <section class="card">
                     <h2 class="card-title">Your Rights</h2>
                     <div class="card-body">
                         <p>Under data protection laws, you have the right to:</p>
@@ -171,26 +164,26 @@
                         </ul>
                         <p>To exercise these rights, please <a href="contact.html">contact us</a>.</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="card">
+                <section class="card">
                     <h2 class="card-title">Changes to This Policy</h2>
                     <div class="card-body">
                         <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with
                             an updated
                             revision date. We encourage you to review this policy periodically.</p>
                     </div>
-                </div>
+                </section>
 
-                <div class="card">
+                <section class="card">
                     <h2 class="card-title">Contact Us</h2>
                     <div class="card-body">
                         <p>If you have questions about this Privacy Policy, please <a href="contact.html">contact
                                 us</a>.</p>
                     </div>
-                </div>
+                </section>
             </div>
-        </div>
+        </section>
     </section>
     <!-- Category Popup Modal -->
     <div class="category-modal" id="categoryModal">
@@ -243,7 +236,7 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="container">
+        <section class="container">
             <div class="footer-grid">
                 <div>
                     <h3 class="footer-section-title">abcroot</h3>
@@ -280,7 +273,7 @@
             <div class="footer-bottom">
                 <p>&copy; <span class="f-year"></span> abcroot. All rights reserved. Built with care for productivity.
             </div>
-        </div>
+        </section>
     </footer>
 
     <script src="js/main.js" defer></script>
@@ -293,4 +286,3 @@
 </body>
 
 </html>
-
