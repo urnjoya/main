@@ -1,0 +1,147 @@
+.clear-btn {
+    background-color: #0e3972;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 0 0 10px 10px;
+}
+
+.copy-btn {
+    background-color: #0e3972;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 0 0 10px 10px;
+    padding: 12px 24px;
+}
+
+.btn-secondary:hover {
+    background-color: #0e3972;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.clear-btn,
+.copy-btn {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.copy-btn.copied {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-textarea,
+.result-content {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*  */
+
+.form-group,
+.result-card {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    min-width: 50%;
+}
+
+.result-card {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.result-content {
+    max-height: 100%;
+}
+
+@media (max-width:767px) {
+
+    .form-group,
+    .result-card {
+        margin-bottom: var(--space-sm);
+    }
+
+    .page-title {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .ans {
+        gap: var(--space-0)
+    }
+
+    .examples li {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width:768px) {
+    .p1 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Two boxes (rows) per column */
+        grid-auto-flow: row;
+        gap: 10px;
+        height: 50vh;
+        margin-bottom: 2%;
+    }
+
+    .form-group,
+    .result-card {
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        min-width: 50%;
+    }
+
+    .result-card {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .result-content {
+        max-height: 100%;
+    }
+
+    .form-textarea,
+    .result-content {
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .form-group button,
+    .result-card button {
+        width: 100%;
+        height: auto;
+    }
+}
