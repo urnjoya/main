@@ -6,6 +6,7 @@
 /* ============================================
    CSS RESET & BASE STYLES
    ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
 
 * {
     margin: 0;
@@ -85,13 +86,24 @@
     --transition-slow: 350ms ease;
 }
 
+::-webkit-scrollbar {
+    display: hidden;
+    /* Chrome, Safari, and Opera */
+    -ms-overflow-style: none;
+    /* Internet Explorer and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    overflow-y: scroll;
+    /* Optional: ensures scrolling functionality is explicit */
+}
+
 html {
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font-sans);
+    font-family: "Inter", sans-serif;
     color: var(--color-text-primary);
     background-color: var(--color-bg-primary);
     line-height: 1.6;
@@ -177,9 +189,14 @@ code {
 
 .container {
     max-width: var(--container-max-width);
-    margin: 0 auto;
+    margin: 0 0.2%;
     padding: 0 var(--container-padding);
 }
+
+main .container {
+    max-width: 100%;
+}
+
 
 .section {
     padding: var(--space-3xl) 0;
@@ -249,6 +266,7 @@ code {
     color: var(--color-primary);
     text-decoration: none;
     flex-shrink: 0;
+    font-family: "Outfit", sans-serif;
     /*  */
     /* Linear gradient: 50% color1, 50% color2 */
     background: linear-gradient(to right, wheat 50%, var(--color-secondary-light) 50%);
@@ -256,13 +274,21 @@ code {
     /* Background ko text ke shape mein katein */
     -webkit-background-clip: text;
     background-clip: text;
-
     /* Text color ko transparent banayein taaki background dikhe */
     color: transparent;
 }
 
 .navbar-logo:hover {
-    color: var(--color-primary-dark);
+    /*  */
+    /* Linear gradient: 50% color1, 50% color2 */
+    background: linear-gradient(to right, var(--color-secondary-light) 50%, wheat 50%);
+
+    /* Background ko text ke shape mein katein */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Text color ko transparent banayein taaki background dikhe */
+    color: transparent;
 }
 
 .navbar-search {
@@ -439,16 +465,18 @@ code {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: var(--space-xs);
     padding: var(--space-sm) var(--space-lg);
     border-radius: var(--radius-sm);
-    font-weight: bold;
-    font-size: 0.875rem;
+    /* font-weight: bold; */
     border: none;
     cursor: pointer;
     transition: all var(--transition-fast);
     text-decoration: none;
     line-height: 1.5;
+}
+
+.btn-main {
+    font-size: 14px;
 }
 
 .btn-primary {
@@ -471,14 +499,13 @@ code {
 .btn-primary:hover {
     background: var(--color-primary-dark);
     color: white;
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+    /* transform: translateY(-1px);
+    box-shadow: var(--shadow-md); */
 }
 
 .btn-secondary {
     background: var(--color-bg-secondary);
     color: var(--color-text-primary);
-    border: 1px solid var(--color-border);
 }
 
 .btn-secondary:hover {
@@ -524,16 +551,16 @@ code {
 
 .card {
     background: var(--color-bg-primary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
+    border-top: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
     padding: var(--space-lg);
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-base);
-}
-
-.card:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
+    margin-top: 2%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 .card-header {
@@ -563,6 +590,16 @@ code {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.card ul {
+    margin-left: 2%;
+}
+
+.card h3 {
+    margin-top: 2%;
+    font-size: 1.20rem;
+    font-weight: 600;
 }
 
 /* Tool Card Specific */
@@ -657,6 +694,20 @@ code {
     /* Important */
 }
 
+[contenteditable="true"]:empty::before {
+    content: attr(data-placeholder);
+    color: gray;
+    /* Styles the placeholder text color */
+    opacity: 0.6;
+    /* Makes it look like a placeholder */
+    /* Other styling as needed, e.g., position, padding */
+}
+
+/* Optional: Hide the placeholder when the div is focused */
+[contenteditable="true"]:empty:focus::before {
+    content: none;
+}
+
 
 .form-group {
     margin-bottom: var(--space-lg);
@@ -680,8 +731,8 @@ code {
     font-family: inherit;
     font-size: 0.938rem;
     color: var(--color-text-primary);
-    background: var(--color-bg-primary);
-    transition: all var(--transition-fast);
+    background: var(--color-bg-tertiary);
+    /* transition: all var(--transition-fast); */
 }
 
 .form-input:focus,
@@ -689,14 +740,23 @@ code {
 .form-select:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    /* box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); */
 }
 
 .form-textarea {
-    resize: vertical;
+    background-color: rgb(255, 255, 255);
+    resize: none;
     min-height: 120px;
     font-family: var(--font-mono);
     line-height: 1.5;
+}
+
+.form-textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.form-textarea:hover {
+    background-color: whitesmoke;
 }
 
 .form-hint {
@@ -712,7 +772,7 @@ code {
 
 .search-input input {
     width: 100%;
-    padding: var(--space-xs) var(--space-xs) var(--space-xs) 2.75rem;
+    padding: var(--space-xs) 1px var(--space-xs) 2.75rem;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-full);
     font-size: 0.875rem;
@@ -740,10 +800,10 @@ code {
    ============================================ */
 
 .result-card {
-    background: var(--color-bg-secondary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg);
+    /* background: var(--color-bg-secondary); */
+    /* border: 1px solid var(--color-border); */
+    /* border-radius: var(--radius-lg); */
+    /* padding: var(--space-lg); */
     margin-top: var(--space-lg);
 }
 
@@ -772,7 +832,14 @@ code {
     height: 160px;
     max-height: 160px;
     /* max-height: max-content; */
-    overflow-y: auto;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+}
+
+.result-content::-webkit-scrollbar {
+    display: none;
 }
 
 .result-empty {
@@ -801,11 +868,6 @@ code {
     gap: var(--space-xs);
 }
 
-.copy-btn:hover {
-    background: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
-}
 
 .copy-btn.copied {
     background: var(--color-success);
@@ -1075,6 +1137,14 @@ code {
     font-size: 0.875rem;
 }
 
+footer .container {
+    margin: 0 1%;
+}
+
+footer a {
+    width: fit-content;
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
@@ -1133,10 +1203,7 @@ code {
 
 .tool-interface {
     background: var(--color-bg-primary);
-    /* border: 1px solid var(--color-border); */
-    /* border-radius: var(--radius-lg); */
-    padding: var(--space-xl);
-    /* box-shadow: var(--shadow-md); */
+    /* padding-top: var(--space-xl); */
 }
 
 .tool-section {
@@ -1174,9 +1241,9 @@ code {
 }
 
 @media (max-width: 768px) {
-    :root {
-        --container-padding: var(--space-md);
-    }
+    /* :root { */
+    /* --container-padding: var(--space-md); */
+    /* } */
 
     h1 {
         font-size: 2rem;
@@ -1203,9 +1270,12 @@ code {
     }
 
     .navbar-search {
-        order: 3;
+        /* order: 2; */
         width: 100%;
         max-width: 100%;
+        height: fit-content;
+        min-height: fit-content;
+
     }
 
     .navbar-menu {
@@ -1264,6 +1334,8 @@ code {
 
     .btn {
         padding: var(--space-sm) var(--space-lg);
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .grid-cols-auto {
