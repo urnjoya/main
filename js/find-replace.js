@@ -8,7 +8,11 @@ const wholeWordCheckbox = document.getElementById('match-whole-word-checkbox');
 
 let matches = [];
 let currentIndex = -1;
-
+function escapeHTML(text) {
+    const div = document.createElement("div");
+    div.textContent = text;
+    return div.innerHTML;
+}
 /* -------------------- GET CLEAN TEXT -------------------- */
 function getText() {
     return editor.innerText;
@@ -48,7 +52,7 @@ function findMatches() {
     currentIndex = -1;
 
     if (!regex) {
-        setHTML(text);
+        escapeHTML(text);
         resultCount.textContent = "0 of 0";
         return;
     }
@@ -62,14 +66,14 @@ function findMatches() {
     }
 
     if (matches.length === 0) {
-        setHTML(text);
+        escapeHTML(text);
         resultCount.textContent = "0 of 0";
         return;
     }
 
     // highlight all
-    const highlighted = text.replace(regex, m => `<mark>${m}</mark>`);
-    setHTML(highlighted);
+    const safeText = escapeHTML(text);
+    const highlighted = safeText.replace(regex, m => `<mark>${m}</mark>`); setHTML(highlighted);
 
     currentIndex = 0;
     highlightActive();
@@ -121,7 +125,7 @@ document.querySelector('.replace-all-btn').addEventListener('click', () => {
     if (!regex) return;
 
     const newText = getText().replace(regex, replaceInput.value);
-    setHTML(newText);
+    setHTML(escapeHTML(newText));
 
     findMatches();
 });
