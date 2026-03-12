@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+
+  <!-- Background -->
+  <rect width="256" height="256" rx="48" fill="#0f172a"/>
+
+  <!-- Gear -->
+  <g transform="translate(128,128)">
+    <circle r="52" fill="#38bdf8"/>
+
+    <!-- Gear Teeth -->
+    <g fill="#38bdf8">
+      <rect x="-6" y="-80" width="12" height="24"/>
+      <rect x="-6" y="56" width="12" height="24"/>
+      <rect x="-80" y="-6" width="24" height="12"/>
+      <rect x="56" y="-6" width="24" height="12"/>
+
+      <rect x="-60" y="-60" width="16" height="16" transform="rotate(45)"/>
+      <rect x="44" y="-60" width="16" height="16" transform="rotate(45)"/>
+      <rect x="-60" y="44" width="16" height="16" transform="rotate(45)"/>
+      <rect x="44" y="44" width="16" height="16" transform="rotate(45)"/>
+    </g>
+
+    <!-- Inner circle -->
+    <circle r="28" fill="#0f172a"/>
+
+    <!-- Letter A -->
+    <text x="0" y="10"
+          text-anchor="middle"
+          font-size="40"
+          font-family="Arial, sans-serif"
+          font-weight="bold"
+          fill="#22c55e">A</text>
+  </g>
+
+</svg>
