@@ -190,3 +190,15 @@ document.addEventListener("keydown", function (e) {
     }
 
 });
+
+// COPY
+function copyResult() {
+    const result1 = document.getElementById('input-text').textContent;
+    if (result1 == "") {
+        showNotification('Please enter some text first', 'error')
+        return
+    }
+    else {
+        copyToClipboard(result1, document.getElementById('copy-btn'));
+    }
+}
