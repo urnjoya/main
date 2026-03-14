@@ -433,7 +433,7 @@ document.addEventListener("keydown", function (e) {
         e.stopPropagation();
         e.stopImmediatePropagation();
 
-        convertCase(shortcuts[key]);
+        runConversion(shortcuts[key]);
     }
 
 }, true); // capture phase
