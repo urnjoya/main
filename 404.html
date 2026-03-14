@@ -1,32 +1,68 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Page Not Found | abcroot</title>
   <meta name="description"
     content="The page you are looking for might have been removed, renamed, or is temporarily unavailable.">
   <meta name="author" content="abcroot">
   <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://abcroot.xyz/404.html">
+
+  <!-- THEME -->
+  <meta name="theme-color" content="#0A315B">
+
+  <!-- FAVICONS -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+
+  <!-- APPLE ICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- WINDOWS TILE -->
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/android-192.png">
+
+  <!-- APP MODE (iOS PWA) -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-title" content="abcroot Tools">
+  <meta name="mobile-web-app-status-bar-style" content="black-translucent">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="404 Not Found | abcroot">
   <meta property="og:description" content="Fast, free, privacy-focused online tools for developers and creators.">
-  <meta property="og:url" content="https://abcroot.xyz">
+  <meta property="og:url" content="https://abcroot.xyz/404.html">
   <meta property="og:image" content="https://abcroot.xyz/assets/preview.png">
-
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="tool preview">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Free Online Tools | abcroot">
   <meta name="twitter:description" content="Professional browser-based tools. 100% free and secure.">
   <meta name="twitter:image" content="https://abcroot.xyz/assets/preview.png">
-  <title>404 Page Not Found | abcroot</title>
-  <link rel="canonical" href="https://abcroot.xyz/404.html">
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="twitter:image:alt" content="tool preview">
+
+  <!-- PERFORMANCE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- ANALYTICS -->
   <script src="/js/analytics.js"></script>
+
+  <!-- CSS PRELOAD -->
+  <link rel="preload" href="/css/main.css" as="style">
   <link rel="stylesheet" href="/css/main.css">
   <style>
     /* --- Layout & Container --- */
@@ -240,6 +276,7 @@
   </style>
   <base href="https://abcroot.xyz/">
 </head>
+
 <body>
   <main class="m-container">
     <div class="m-error-card">
@@ -262,7 +299,8 @@
         <div class="navbar-search">
           <div class="search-input">
             <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" placeholder="Search tools..." autocomplete="off" aria-label="Search tools">
+            <input type="text" id="searchInput" placeholder="Search tools..." autocomplete="off"
+              aria-label="Search tools">
             <div id="searchResults" class="search-results"></div>
           </div>
         </div>
@@ -271,7 +309,7 @@
       <!-- Actions -->
       <div class="m-actions">
         <a href="/" class="m-btn btn-theme-a">Go to Homepage</a>
-        <a href="#categories" class="m-btn btn-theme-a">Browse All Tools</a>
+        <a href="/#categories" class="m-btn btn-theme-a">Browse All Tools</a>
       </div>
 
     </div>
@@ -281,7 +319,7 @@
     <div class="container">
       <h2 class="text-center mb-lg">Browse by Category</h2>
       <div class="grid grid-cols-4">
-        <a href="/tools/text-tools/" class="card category-card">
+        <a href="/text-tools/" class="card category-card">
           <div class="category-card-icon"><svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
               aria-hidden="true">
@@ -295,7 +333,7 @@
           <p class="card-description">Powerful text formatting and writing utilities.</p>
         </a>
 
-        <a href="/tools/developer-tools/" class="card category-card">
+        <a href="/developer-tools/" class="card category-card">
           <div class="category-card-icon">
             <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -308,7 +346,7 @@
           <p class="card-description">Encoding, debugging, and development utilities.</p>
         </a>
 
-        <a href="/tools/security-tools" class="card category-card">
+        <a href="/security-tools" class="card category-card">
           <div class="category-card-icon">
             <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -321,7 +359,7 @@
           <p class="card-description">Secure hashing and privacy-focused tools.</p>
         </a>
 
-        <a href="/tools/utility-tools/" class="card category-card">
+        <a href="/utility-tools/" class="card category-card">
           <div class="category-card-icon">
             <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -392,8 +430,8 @@
       <p class="mb-xl" style="max-width: 600px; margin-left: auto; margin-right: auto;">Explore our collection of
         professional tools and boost your productivity today.</p>
       <div class="hero-actions">
-        <a href="/tools/text-tools/" class="btn btn-primary btn-lg">Browse Text Tools</a>
-        <a href="/tools/developer-tools" class="btn btn-secondary btn-lg">Browse Dev Tools</a>
+        <a href="/text-tools/" class="btn btn-primary btn-lg">Browse Text Tools</a>
+        <a href="/developer-tools" class="btn btn-secondary btn-lg">Browse Dev Tools</a>
       </div>
     </div>
   </section>
@@ -412,10 +450,10 @@
         <div>
           <h4 class="footer-section-title">Categories</h4>
           <ul class="footer-links">
-            <li><a href="/tools/text-tools/" class="footer-link">Text & Writing Tools</a></li>
-            <li><a href="/tools/developer-tools/" class="footer-link">Developer Tools</a></li>
-            <li><a href="/tools/security-tools/" class="footer-link">Security & Privacy</a></li>
-            <li><a href="/tools/utility-tools/" class="footer-link">Random & Utility</a></li>
+            <li><a href="/text-tools/" class="footer-link">Text & Writing Tools</a></li>
+            <li><a href="/developer-tools/" class="footer-link">Developer Tools</a></li>
+            <li><a href="/security-tools/" class="footer-link">Security & Privacy</a></li>
+            <li><a href="/utility-tools/" class="footer-link">Random & Utility</a></li>
           </ul>
         </div>
 
@@ -449,4 +487,5 @@
   <script src="/js/main-j.js" defer></script>
   <script src="/js/search-index.js" defer></script>
 </body>
+
 </html>
