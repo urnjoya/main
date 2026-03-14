@@ -7,60 +7,95 @@ function convertCase(mode) {
     }
 
     let result = '';
-    const words = text.trim().split(/\s+/);
 
     switch (mode) {
-        case 'sort-ascending':
-            {
-                const lines = text.split('\n').filter(line => line.trim() !== '');
-                // const words = text.trim().split(/\s+/);
-// words
-                result = lines
-                    .sort((a, b) =>
-                        a.localeCompare(b, undefined, { sensitivity: 'base' })
-                    )
-                    // .join(' ');
+        // Line sort atoz
+        case 'sort-ascending': {
+            const lines = text.split(/\r?\n/).filter(line => line.trim() !== '');
+            result = lines
+                .sort((a, b) =>
+                    a.localeCompare(b, undefined, {
+                        sensitivity: 'base'
+                    })
+                )
                 .join('\n')
-            }
+        }
             break;
-        case 'sort-descending':
-            {
-                // const words = text.trim().split(/\s+/);
-const lines = text.split('\n').filter(line => line.trim() !== '');
-                result = lines
-                    .sort((a, b) =>
-                        b.localeCompare(a, undefined, { sensitivity: 'base' })
-                    )
-                    // .join(' ');
+        // line sort ztoa
+        case 'sort-descending': {
+            const lines = text.split(/\r?\n/).filter(line => line.trim() !== '');
+            result = lines
+                .sort((a, b) =>
+                    b.localeCompare(a, undefined, {
+                        sensitivity: 'base'
+                    })
+                )
                 .join('\n')
-            }
+        }
             break;
-        case 'remove-duplicates':
-            {
-                const words = text.trim().split(/\s+/);
-                const seen = new Set();
+        // remove duplicate lines
+        case 'remove-duplicates': {
+            const lines = text.split(/\r?\n/).filter(line => line.trim() !== '');
+            const seen = new Set();
 
-                const uniqueWords = words.filter(word => {
-                    const normalized = word.toLowerCase();
-                    if (seen.has(normalized)) return false;
-                    seen.add(normalized);
-                    return true;
-                });
+            const uniqueLines = lines.filter(line => {
+                const normalized = line.toLowerCase();
+                if (seen.has(normalized)) return false;
+                seen.add(normalized);
+                return true;
+            });
 
-                // result = uniqueWords.join(' ');
-                result = uniqueWords.join('\n');
-            }
+            result = uniqueLines.join(' ');
+        }
             break;
-        case 'sort-by-length':
-            {
-                //const words = text.trim().split(/\s+/);
-const lines = text.split('\n').filter(line => line.trim() !== '');
-                result = lines
-                    .sort((a, b) => a.length - b.length)
-                    //.join(' ');
-.join('\n')
+        // line sort by length
+        case 'sort-by-length': {
+            const lines = text.split(/\r?\n/).filter(line => line.trim() !== '');
 
-            }
+            result = lines
+                .sort((a, b) => a.length - b.length)
+                .join('\n');
+
+        }
+            break;
+
+        // WORD SORT A-Z
+        case 'word-ascending': {
+            const words = text.trim().split(/\s+/);
+            const lines = text.split(/\r?\n/).filter(line => line.trim() !== '');
+
+            result = lines
+                .sort((a, b) => a.length - b.length)
+                .join('\n');
+        }
+            break;
+
+        // sort by length word
+        case 'sort-by-length-word': {
+            const words = text.trim().split(/\s+/);
+
+            result = words
+                .sort((a, b) => a.length - b.length)
+                .join(' ');
+        }
+            break;
+
+        // remove duplicate words
+        case 'remove-duplicate-words': {
+            const words = text.trim().split(/\s+/);
+            const seen = new Set();
+
+            const uniqueWords = words.filter(word => {
+                const normalized = word.toLowerCase();
+
+                if (seen.has(normalized)) return false;
+
+                seen.add(normalized);
+                return true;
+            });
+
+            result = uniqueWords.join(' ');
+        }
             break;
 
         default:
@@ -75,17 +110,16 @@ function copyResult() {
     if (result1 == "Your result will appear here...") {
         showNotification('Please enter some text first', 'error')
         return
-    }
-    else {
+    } else {
         copyToClipboard(result1, document.getElementById('copy-btn'));
     }
 }
+
 function clearAll() {
     if (document.getElementById('input-text').value == '' && document.getElementById('result').textContent == 'Your result will appear here...') {
         showNotification('Nothing to clear!', 'error');
         return;
-    }
-    else {
+    } else {
         document.getElementById('input-text').value = '';
         document.getElementById('result').textContent = 'Your result will appear here...';
         showNotification('All clear', 'success');
