@@ -62,7 +62,7 @@ function convertCase(type) {
             return;
     }
 
-    textarea.value = text;
+    // textarea.value = text;
     document.getElementById('result').textContent = text;
 }
 
