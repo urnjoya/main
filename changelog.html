@@ -5,12 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abcroot Changelog - Latest Updates & Features</title>
     <meta name="description"
         content="Stay updated with the latest features, improvements, and fixes on abcroot. Check the changelog to see all website updates and enhancements for users.">
     <meta name="keywords"
         content="abcroot updates, website changelog, new features, bug fixes, improvements, online tools updates, user notifications">
     <meta name="author" content="abcroot">
     <meta name="robots" content="index, follow">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://abcroot.xyz/changelog.html">
+
+    <!-- THEME -->
+    <meta name="theme-color" content="#0A315B">
+
+    <!-- FAVICONS -->
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+
+    <!-- APPLE ICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+    <!-- WINDOWS TILE -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/android-192.png">
+
+    <!-- APP MODE (iOS PWA) -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-title" content="abcroot Tools">
+    <meta name="mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -19,26 +47,30 @@
     <meta property="og:description"
         content="Discover all recent updates, new tools, improvements, and bug fixes for abcroot. Keep track of enhancements made for users.">
     <meta property="og:url" content="https://abcroot.xyz/changelog.html">
-    <meta property="og:image" content="https://abcroot.xyz/assets/changelog-preview.png">
+    <meta property="og:image" content="https://abcroot.xyz/assets/preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="tool preview">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="abcroot Changelog – Updates & Features">
     <meta name="twitter:description"
         content="See all recent updates, bug fixes, and new features on abcroot. Stay informed about website enhancements and new tools.">
-    <meta name="twitter:image" content="https://abcroot.xyz/assets/changelog-preview.png">
+    <meta name="twitter:image" content="https://abcroot.xyz/assets/preview.png">
+    <meta name="twitter:image:alt" content="tool preview">
 
-    <title>abcroot Changelog – Latest Updates & Features</title>
-    <link rel="canonical" href="https://abcroot.xyz/changelog.html">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <!-- PERFORMANCE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <script src="js/analytics.js"></script>
-    <link rel="preload" href="css/main.css" as="style">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- ANALYTICS -->
+    <script src="/js/analytics.js"></script>
+
+    <!-- CSS PRELOAD -->
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="stylesheet" href="/css/main.css">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -54,7 +86,7 @@
     "url": "https://abcroot.xyz",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://abcroot.xyz/assets/logo.png",
+      "url": "https://abcroot.xyz/assets/favicon-64.png",
       "width": 250,
       "height": 60
     }
@@ -68,7 +100,7 @@
     <!-- NAVIGATION -->
     <nav class="navbar" role="navigation">
         <div class="container navbar-container">
-            <a href="index.html" class="navbar-logo" aria-label="abcroot homepage">abcroot</a>
+            <a href="/" class="navbar-logo" aria-label="abcroot homepage">abcroot</a>
             <div class="navbar-search">
                 <div class="search-input">
                     <span class="search-icon">🔍</span>
@@ -82,8 +114,8 @@
 
             <div class="navbar-menu">
                 <ul class="navbar-links">
-                    <li><a href="about.html" class="navbar-link">About</a></li>
-                    <li><a href="contact.html" class="navbar-link">Contact</a></li>
+                    <li><a href="/about.html" class="navbar-link">About</a></li>
+                    <li><a href="/contact.html" class="navbar-link">Contact</a></li>
                     <li class="navbar-link" id="categoryBtn">Category</li>
                 </ul>
             </div>
@@ -95,15 +127,7 @@
             <p class="page-description">
                 Track new features, improvements, and bug fixes released on abcroot.
             </p>
-            <div class="card" style="margin-top: var(--space-lg);">
-                <div class="card-body">
-                    <h2>Testing – March 2026</h2>
-                    <ul>
-                        <li>💻 Tested every page on different device.</li>
-                        <li>⚡ Performance & responsiveness optimization</li>
-                    </ul>
-                </div>
-            </div>
+
             <div class="card" style="margin-top: var(--space-lg);">
                 <div class="card-body">
                     <h2>V1.0.0 – February 2026</h2>
@@ -125,7 +149,7 @@
                 <button class="category-close" id="categoryClose">&times;</button>
             </div>
             <div class="category-modal-body grid grid-cols-2 gap-lg">
-                <a href="tools/text-tools/" class="category-popup-card">
+                <a href="/text-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -136,7 +160,7 @@
                         </svg></div>
                     <span>Text Tools</span>
                 </a>
-                <a href="tools/developer-tools/" class="category-popup-card">
+                <a href="/developer-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -145,7 +169,7 @@
                         </svg></div>
                     <span>Developer Tools</span>
                 </a>
-                <a href="tools/security-tools/" class="category-popup-card">
+                <a href="/security-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -154,7 +178,7 @@
                         </svg></div>
                     <span>Security</span>
                 </a>
-                <a href="tools/utility-tools/" class="category-popup-card">
+                <a href="/utility-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -180,28 +204,28 @@
                 <div>
                     <h4 class="footer-section-title">Categories</h4>
                     <ul class="footer-links">
-                        <li><a href="tools/text-tools/" class="footer-link">Text & Writing Tools</a></li>
-                        <li><a href="tools/developer-tools/" class="footer-link">Developer Tools</a></li>
-                        <li><a href="tools/security-tools/" class="footer-link">Security & Privacy</a></li>
-                        <li><a href="tools/utility-tools/" class="footer-link">Random & Utility</a></li>
+                        <li><a href="/text-tools/" class="footer-link">Text & Writing Tools</a></li>
+                        <li><a href="/developer-tools/" class="footer-link">Developer Tools</a></li>
+                        <li><a href="/security-tools/" class="footer-link">Security & Privacy</a></li>
+                        <li><a href="/utility-tools/" class="footer-link">Random & Utility</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-section-title">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact</a></li>
-                        <li><a href="changelog.html" class="footer-link">Changelog</a></li>
-                        <li><a href="sitemap.html" class="footer-link">Sitemap</a></li>
+                        <li><a href="/about.html" class="footer-link">About Us</a></li>
+                        <li><a href="/contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="/changelog.html" class="footer-link">Changelog</a></li>
+                        <li><a href="/sitemap.html" class="footer-link">Sitemap</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="footer-section-title">Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
-                        <li><a href="disclaimer.html" class="footer-link">Disclaimer</a></li>
+                        <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="/disclaimer.html" class="footer-link">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
@@ -211,13 +235,13 @@
             </div>
         </section>
     </footer>
-    <script src="js/main.js" defer></script>
+    <script src="/js/main.js" defer></script>
     <!-- FOR FOOTER YEAR UPDATE -->
-    <script src="js/main-j.js" defer></script>
+    <script src="/js/main-j.js" defer></script>
     <!-- FOR MODEL OPEN -->
-    <script src="js/main-m.js" defer></script>
+    <script src="/js/main-m.js" defer></script>
     <!-- FOR SEARCH BY INDEX -->
-    <script src="js/search-index.js" defer></script>
+    <script src="/js/search-index.js" defer></script>
 </body>
-</html>
 
+</html>
