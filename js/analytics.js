@@ -7,7 +7,8 @@ function loadScript(src, async = true) {
     document.head.appendChild(s);
     console.log("google tag successfully loading using ", src);
 }
-loadScript("https://www.googletagmanager.com/gtag/js?id=G-44K47CQEKZ")
+loadScript("https://www.googletagmanager.com/gtag/js?id=G-44K47CQEKZ");
+loadScript("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9082425372176603");
 
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
