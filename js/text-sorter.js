@@ -45,7 +45,7 @@ function convertCase(mode) {
                 return true;
             });
 
-            result = uniqueLines.join('/n');
+            result = uniqueLines.join('\n');
         }
             break;
         // line sort by length
@@ -62,14 +62,13 @@ function convertCase(mode) {
         // WORD SORT A-Z
         case 'word-ascending': {
             const words = text.trim().split(/\s+/);
-            const lines = text.split(/\r?\n/).filter(line => line.trim() !== '');
 
-            result = lines
-                .sort((a, b) => a.length - b.length)
-                .join('\n');
+            result = words
+                .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
+                .join(' ');
         }
             break;
-               // WORD SORT Z-A
+        // WORD SORT Z-A
         case 'word-descending': {
             const words = text.trim().split(/\s+/);
 
@@ -77,7 +76,7 @@ function convertCase(mode) {
                 .sort((a, b) => b.localeCompare(a, undefined, { sensitivity: 'base' }))
                 .join(' ');
         }
-        break;
+            break;
 
         // sort by length word
         case 'sort-by-length-word': {
