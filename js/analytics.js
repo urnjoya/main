@@ -5,7 +5,7 @@ function loadScript(src, async = true) {
     s.src = src;
     s.async = async;
     document.head.appendChild(s);
-    console.log("google tag successfully loading using ", src);
+    console.log("urlsuccessfully loading using ", src);
 }
 loadScript("https://www.googletagmanager.com/gtag/js?id=G-44K47CQEKZ");
 loadScript("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9082425372176603");
