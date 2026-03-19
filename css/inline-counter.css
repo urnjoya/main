@@ -1,0 +1,115 @@
+/* Highlight container */
+.stats-highlight {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1%;
+    cursor:default;
+}
+
+/* Highlight primary stats slightly more */
+.stats-highlight .stat.primary {
+    background: rgba(255, 255, 255, 0.12);
+}
+.stat + .stat::before {
+    content: "|";
+    margin-right: 6px;
+    /* color: rgba(255,255,255,0.4); */
+}
+
+/* Smooth hover effect */
+/* .stats-highlight .stat:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+} */
+/* ===== Stats Card Container ===== */
+.stats-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 6px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Hide scrollbar (clean UI) */
+.stats-card::-webkit-scrollbar {
+    display: none;
+}
+
+/* ===== Individual Stat ===== */
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.08);
+    flex-shrink: 0; /* prevent shrinking */
+}
+
+/* Highlight important stats */
+.stat.primary {
+    font-weight: 600;
+}
+
+/* Optional stats (less important) */
+.stat.optional {
+    opacity: 0.8;
+}
+
+/* ===== Numbers ===== */
+.stat span {
+    font-variant-numeric: tabular-nums;
+    min-width: 3.5ch;
+    text-align: right;
+    background: #fff;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: var(--radius-lg);
+}
+
+/* ===== Mobile (only important stats visible) ===== */
+@media (max-width: 600px) {
+    .stat.optional {
+        display: none; /* hides No Space + Sentences */
+    }
+
+    .stats-card {
+        font-size: 11px;
+        gap: 6px;
+    }
+}
+
+/* ===== Tablet ===== */
+@media (min-width: 768px) {
+    .stats-card {
+        font-size: 12px;
+    }
+
+    .stat.optional {
+        display: flex; /* show again */
+    }
+}
+
+/* ===== Desktop (minimal look) ===== */
+@media (min-width: 1024px) {
+    .stats-card {
+        justify-content: center;
+        font-size: 11px;
+        gap: 12px;
+    }
+
+    .stat {
+        background: transparent; /* cleaner */
+        padding: 3px 6px;
+    }
+
+    .stat span {
+        background: rgba(255, 255, 255, 0.9);
+    }
+}
