@@ -78,11 +78,13 @@
     <link rel="preload" href="/css/main.css" as="style">
     <link rel="preload" href="/css/main-a.css" as="style">
     <link rel="preload" href="/css/case-converter.css" as="style">
+    <link rel="preload" href="/css/inline-counter.css" as="style">
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/main-a.css">
     <link rel="stylesheet" href="/css/case-converter.css">
+    <link rel="stylesheet" href="/css/inline-counter.css">
 
 
     <!-- WEB APPLICATION SCHEMA -->
@@ -208,13 +210,13 @@
     <main class="section-sm">
         <section class="container" style="max-width: fit-content;">
             <div class="tool-interface">
-                <section class="stats-card card-highlight" id="stats-card">
-                    <div>Character Count: <span id="stat-chars">0</span></div>
-                    <div>No space Characters Count: <span id="stat-chars-nospace">0</span></div>
-                    <div>Words Count: <span id="stat-words">0</span></div>
-                    <div>Paragraph Count: <span id="stat-paragraphs">0</span></div>
-                    <div>Sentence Count: <span id="stat-sentences">0</span></div>
-                </section>
+                <div id="stats-card" class="stats-card stats-highlight">
+                    <div class="stat primary">Character: <span id="stat-chars">0</span></div>
+                    <div class="stat optional">Character (no spcae): <span id="stat-chars-nospace">0</span></div>
+                    <div class="stat primary">Words: <span id="stat-words">0</span></div>
+                    <div class="stat primary">Lines: <span id="stat-lines">0</span></div>
+                    <div class="stat optional">Sentences: <span id="stat-sentences">0</span></div>
+                </div>
                 <div class="p1">
                     <div class="form-group">
                         <textarea id="input-text" class="form-textarea" placeholder="Type or paste text here..."
@@ -821,6 +823,8 @@
     <script src="/js/main-m.js" defer></script>
     <!-- FOR SEARCH BY INDEX -->
     <script src="/js/search-index.js" defer></script>
+        <script src="/js/inline-counter.js" defer></script>
+
 </body>
 
 </html>
